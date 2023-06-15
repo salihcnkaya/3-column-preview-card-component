@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+
+	--transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+	--very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font: inherit;
+}
+
+body {
+	background-color: var(--very-light-gray);
+	font-size: 0.9375rem;
+	font-family: 'Lexend Deca', sans-serif;
+
+	display: flex;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	margin: 1rem;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.element {
+	padding: 3rem 3.5rem;
+}
+
+.grid {
+	display: grid;
+	gap: 2rem;
+}
+
+button {
+	margin-top: 2rem;
+	border: none;
+	border-radius: 2rem;
+	padding: 0.825rem 2rem;
+	color: #000;
+	mix-blend-mode: screen;
+	background-color: var(--very-light-gray);
+	cursor: pointer;
+}
+
+button:hover {
+	color: var(--very-light-gray);
+	background-color: #000;
+	outline: 2px solid var(--very-light-gray);
+}
+
+.element h3 {
+	text-transform: uppercase;
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 2.5rem;
+	color: var(--very-light-gray);
+}
+
+.element p {
+	color: var(--transparent-white-paragraphs);
+	line-height: 1.5;
+}
+
+.card .sedan {
+	background-color: var(--bright-orange);
+}
+
+.card .suvs {
+	background-color: var(--dark-cyan);
+}
+
+.card .luxury {
+	background-color: var(--very-dark-cyan);
+}
+
+
+
+@media (min-width: 600px) {
+	.card {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		max-width: 920px
+	}
+
+	.element {
+		padding: 3rem 3rem;
+	}
+	
+	button {
+		margin-top: 6rem;
+	}
+}
+
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
